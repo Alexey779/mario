@@ -1,0 +1,68 @@
+
+
+
+.game{
+    width: 600px;
+    height: 200px;
+    border-bottom: 1px solid #000;
+    margin: auto 0;
+}
+
+#player{
+    width: 50px;
+    height: 50px;
+    background-image: url("./mario.png");
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+}
+
+#damper{
+    background-image: url("./mushroom.png");
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    top: 110px;
+    position: relative;
+    left: 560px;
+    
+}
+.start{
+    display: block;
+    height: 40px;
+    width: 600px;
+    
+}
+.animate {
+    animation: damperMove 2s infinite linear;
+}
+
+.active{
+    animation: jumpActive 0.3s  linear;
+}
+
+@keyframes damperMove {
+   0%{
+left: 560px;
+   } 
+   100%{
+left: -40px; 
+   }
+}
+@keyframes jumpActive {
+ 0%{
+top: 150px;
+ }
+ 20%{
+top: 100px;
+ }
+ 50%{
+top: 50px;
+ }
+80%{
+top: 100px;
+}
+ 100%{
+    top: 150px;
+ }
+}
