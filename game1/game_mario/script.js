@@ -6,13 +6,16 @@ const btn = document.querySelector(".start");
 
 let interval;
 let isStart = false;
-
+// персонаж "прыгает" на короткое время (т.е. включает визуальный эффект "прыжка")
+// создается стрелочная функция для марио
 const activeJump = () => {
+    // проверка условия если true то игра активна
   if (isStart === true) {
+    // если элемент player не содержит класса актив то добавляется этот класс через метод  classList.add("active")
     if (!player.classList.contains("active")) {
       player.classList.add("active");
     }
-
+// установливается время класса актив и удаляется с помощью метода classList.remove("active")
     setTimeout(() => {
       player.classList.remove("active");
     }, 300);
